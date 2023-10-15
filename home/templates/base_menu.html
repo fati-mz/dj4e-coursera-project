@@ -1,0 +1,131 @@
+{% extends "base_bootstrap.html" %}
+{% block navbar %}
+{% load app_tags %}
+<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="navbar-header">-->
+<!--        <a class="navbar-brand" href="/">{{ settings.APP_NAME }}</a>-->
+<!--    </div>-->
+    <!-- https://stackoverflow.com/questions/22047251/django-dynamically-get-view-url-and-check-if-its-the-current-page -->
+<!--    <ul class="nav navbar-nav">-->
+<!--      {% url 'ads' as ads %}-->
+<!--      <li {% if request.get_full_path == ads %}class="active"{% endif %}>-->
+<!--          <a href="{% url 'ads:all' %}">Ads</a></li>-->
+<!--    </ul>-->
+<!--    <ul class="nav navbar-nav navbar-right">-->
+<!--        {% if user.is_authenticated %}-->
+<!--        <li>-->
+<!--        <a href="{% url 'ads:ad_create' %}">Create Ad</a>-->
+<!--        </li>-->
+<!--        <li class="dropdown">-->
+<!--            <a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+<!--                <img style="width: 25px;" src="{{ user|gravatar:60 }}"/><b class="caret"></b>-->
+<!--            </a>-->
+<!--            <ul class="dropdown-menu">-->
+<!--                <li><a href="{% url 'logout' %}?next={% url 'ads:all' %}">Logout</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--        {% else %}-->
+<!--        <li>-->
+<!--        <a href="{% url 'login' %}?next={% url 'ads:all' %}">Login</a>-->
+<!--        </li>-->
+<!--        {% endif %}-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</nav>-->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      data-bs-toggle="collapse"
+      data-bs-toggle="collapse"
+
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar header -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">{{ settings.APP_NAME }}</a>
+    </div>
+       Left links
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" {% if request.get_full_path == ads %}class="active"{% endif %}>
+          <a class="nav-link" href="{% url 'ads' as ads %}">Ads</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li>
+        <a class="nav-link" href="{% url 'ads:ad_create' %}">Create Ad</a>
+        </li>
+        {% endif %}
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center mr-5">
+        <div class="input-group rounded mx-2 px-3">
+          <form class="d-flex" role="search">
+              <input class="form-control me-2" type="text" placeholder="Search.." name="search"aria-label="Search"{% if search %} value="{{ search }}" {% endif %}>
+              <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                <a class="me-2" href="{% url 'ads:all' %}"><i class="fa fa-undo"></i></a>
+          </form>
+        </div>
+    {% if user.is_authenticated %}
+      <!-- Avatar -->
+      <div class="dropdown mx-2 px-3 data-bs-theme="dark"">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+          data-bs-toggle="dropdown">
+          <img
+            src="{{ user|gravatar:60 }}
+            class="rounded-circle"
+            height="25"
+            alt="photo"
+            loading="lazy"/>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <!--<li>-->
+          <!--  <a class="dropdown-item" href="#">My profile</a>-->
+          <!--</li>-->
+          <!--<li>-->
+          <!--  <a class="dropdown-item" href="#">Settings</a>-->
+          <!--</li>-->
+          <li>
+            <a class="dropdown-item" href="{% url 'logout' %}?next={% url 'ads:all' %}">Logout</a>
+          </li>
+        </ul>
+      </div>
+                {% else %}
+        <ul class="navbar-nav me-auto mb-2 mr-2 mb-lg-0 mx-2 px-3">>
+        <li>
+        <a class="nav-link" href="{% url 'login' %}?next={% url 'ads:all' %}">Login</a>
+        </li>
+        </ul>
+        {% endif %}
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+{% endblock %}
