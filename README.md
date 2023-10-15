@@ -8,3 +8,6 @@ navbar include serach base on name ,text and tags
 ![Screenshot_20231015_124921](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/bef80780-4895-4275-bd26-ab7d906faf7b)
 # edit and delete access for creater user
 ![Screenshot_20231015_125441](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/2cca46d9-6278-4356-a09f-9979a0b6f79e)
+![Screenshot_20231015_125532](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/25929bfa-0142-41fd-8bad-806583b25d95)
+![Screenshot_20231015_125622](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/79d9576e-228e-4875-a7bf-1bbd5de65b74)
+
