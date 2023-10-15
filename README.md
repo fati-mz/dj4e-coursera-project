@@ -12,7 +12,7 @@
 ![Screenshot_20231015_125441](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/2cca46d9-6278-4356-a09f-9979a0b6f79e)
 ![Screenshot_20231015_125532](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/25929bfa-0142-41fd-8bad-806583b25d95)
 add picture for ad
-![Screenshot_20231015_125622](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/41e326df-d944-49dd-a704-37d156685c99)
+![Screenshot_20231015_010312](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/d7558060-040e-46d1-9f78-a147cb42b9dd)
 
 ![Screenshot_20231015_125622](https://github.com/fati-mz/dj4e-coursera-project/assets/84349659/79d9576e-228e-4875-a7bf-1bbd5de65b74)
 
