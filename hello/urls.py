@@ -7,6 +7,6 @@ app_name = 'hello'
 urlpatterns = [
 
     # path('', TemplateView.as_view(template_name='main.html')),
-    path('', views.cookie),
+    path('', views.cookie,name='main'),
 
 ]
